@@ -1,6 +1,6 @@
 :root {
     /* Accent color */
-    --accent-color: #2196F3;
+    --accent-color: #2196f3;
 
     /* Logo text color */
     --primary-logo-text-color: #000000;
@@ -25,6 +25,42 @@
     --secondary-font-family: Raleway, sans-serif;
 }
 
+/* --------------- Reset --------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ----------------------------------- */
+
 body {
     font-family: var(--primary-font-family);
 }
@@ -46,10 +82,27 @@ body {
     color: var(--title-text-color);
 }
 
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 /* --------------- HEADER --------------- */
 
 .header {
+}
 
+.header-container {
+    display: flex;
+    padding: 25px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 93px;
+    margin-right: auto;
 }
 
 .logo-link {
@@ -61,11 +114,27 @@ body {
     color: var(--primary-logo-text-color);
 }
 
-.logo-link .accent {    
+.logo-link .accent {
     color: var(--accent-color);
 }
 
+.nav-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-item {
+    height: 100%;
+}
+
 .nav-link {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -73,7 +142,22 @@ body {
     color: var(--primary-header-text-color);
 }
 
+.header-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-item {
+    height: 100%;
+}
+
 .header-link {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -91,11 +175,15 @@ body {
 /* --------------- HERO --------------- */
 
 .hero {
+    padding: 200px 0;
+
     /* !!! ВРЕМЕННО */
-    background-color: #2F303A;
+    background-color: #2f303a;
 }
 
 .hero-title {
+    margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -107,11 +195,28 @@ body {
 }
 
 .hero-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+
     font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.86;
     color: var(--primary-hero-text-color);
+
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
 }
 
 /* --------------- ADVANTAGES --------------- */
+
+.advantages-container {
+    padding-top: 94px;
+    padding-bottom: 118px;
+}
 
 .visually-hidden {
     position: absolute;
@@ -127,7 +232,19 @@ body {
     overflow: hidden;
 }
 
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 30px;
+}
+
+.advantages-item {
+    flex-basis: calc(100% / 4 - 30px);
+}
+
 .advantages-title {
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -145,7 +262,59 @@ body {
 
 /* --------------- SPECIFICITY --------------- */
 
+.specificity-container {
+    padding-bottom: 94px;    
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.specificity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.specificity-item {
+    flex-basis: calc(100% / 3 - 30px);
+}
+
+.specificity-image {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+/* --------------- TEAM --------------- */
+
+.team-container {
+    padding: 94px 0;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;    
+}
+
+.team-item {
+    flex-basis: calc(100% / 4 - 30px);
+    padding-bottom: 30px;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+
+    display: block;
+    margin-bottom: 30px;
+}
+
 .team-title {
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -166,27 +335,45 @@ body {
 
 .footer {
     /* !!! ВРЕМЕННО */
-    background-color: #2F303A;        
+    background-color: #2f303a;
 }
 
-.footer .logo-link {
+.footer-container {
+    padding: 60px 0;
+}
+
+.logo-link.footer {
+    margin-bottom: 20px;   
+}
+
+.footer.logo-link {
+    display: block;
+
     color: var(--secondary-logo-text-color);
 }
 
 .footer-address {
+    margin-bottom: 9px;
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: #ffffff;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .footer-link {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;    
-    letter-spacing: 0.03em;    
+    line-height: 1.71;
+    letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -194,7 +381,21 @@ body {
 
 /* --------------- ACTIONS --------------- */
 
+.projects-container {
+    padding: 94px 0;
+}
+
+.projects-filter-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
 .projects-filter-btn {
+    padding: 6px 22px;
+
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -202,19 +403,53 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-btn-color);
+
+    background-color: #F5F4FA;
+    border: none;
+    border-radius: 4px;
+}
+
+.projects-filter-btn.active {
+    color: #ffffff;
+    background-color: var(--accent-color);
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-item {
+    flex-basis: calc(100% / 3 - 30px);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+
+    display: block;
+    margin-bottom: 20px;
+
+}
+
+.project-description {
+    padding: 20px 24px;
 }
 
 .project-title {
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
-    line-height: 2;           
-    letter-spacing: 0.06em;    
+    line-height: 2;
+    letter-spacing: 0.06em;
     color: var(--title-text-color);
 }
 
 .project-text {
     font-size: 16px;
-    line-height: 1.88;    
+    line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--content-text-color);
 }
