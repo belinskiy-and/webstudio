@@ -2,6 +2,8 @@
     /* Accent color */
     --accent-color: #2196f3;
 
+    --primary-text-color: #ffffff;
+
     /* Logo text color */
     --primary-logo-text-color: #000000;
     --secondary-logo-text-color: #ffffff;
@@ -23,6 +25,10 @@
     /* Fonts */
     --primary-font-family: Roboto, sans-serif;
     --secondary-font-family: Raleway, sans-serif;
+
+    /* Background colors */
+    --primary-bg-color: #f5f4fa;
+    --secondary-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --------------- Reset --------------- */
@@ -172,13 +178,20 @@ body {
     color: var(--accent-color);
 }
 
+.header-link-icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+}
+
 /* --------------- HERO --------------- */
 
 .hero {
     padding: 200px 0;
 
-    /* !!! ВРЕМЕННО */
-    background-color: #2f303a;
+    background-color: rgba(47, 48, 58, 0.4);
+    background-image: url(../images/bg-hero.jpg);
+    background-size: cover;
 }
 
 .hero-title {
@@ -234,12 +247,44 @@ body {
 
 .advantages-list {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .advantages-item {
+    display: flex;
+    flex-direction: column;
+
     flex-basis: calc(100% / 4 - 30px);
+}
+
+.advantages-item::before {
+    content: '';
+
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--primary-bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.advantages-item:nth-child(1)::before {
+    background-image: url(../images/antena.svg);
+}
+
+.advantages-item:nth-child(2)::before {
+    background-image: url(../images/clock.svg);
+}
+
+.advantages-item:nth-child(3)::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.advantages-item:nth-child(4)::before {
+    background-image: url(../images/astronaut.svg);
 }
 
 .advantages-title {
@@ -263,7 +308,7 @@ body {
 /* --------------- SPECIFICITY --------------- */
 
 .specificity-container {
-    padding-bottom: 94px;    
+    padding-bottom: 94px;
 }
 
 .section-title {
@@ -289,6 +334,10 @@ body {
 
 /* --------------- TEAM --------------- */
 
+.team {
+    background-color: var(--primary-bg-color);
+}
+
 .team-container {
     padding: 94px 0;
 }
@@ -296,12 +345,16 @@ body {
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;    
+    gap: 30px;
 }
 
 .team-item {
     flex-basis: calc(100% / 4 - 30px);
     padding-bottom: 30px;
+
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-photo {
@@ -324,11 +377,83 @@ body {
 }
 
 .team-position {
+    margin-bottom: 16px;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--content-text-color);
+}
+
+.team-social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team-social-item + .team-social-item {
+    margin-left: 10px;
+}
+
+.team-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    color: #afb1b8;
+
+    border-radius: 50%;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: var(--accent-color);
+
+    color: #ffffff;
+}
+
+.team-social-icon {
+    fill: currentColor;
+}
+
+/* --------------- CLIENTS --------------- */
+
+.clients-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-item + .clients-item {
+    margin-left: 30px;
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+
+    color: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.clients-logo {
+    fill: currentColor;
 }
 
 /* --------------- FOOTER --------------- */
@@ -339,11 +464,17 @@ body {
 }
 
 .footer-container {
+    display: flex;
+    align-items: baseline;
     padding: 60px 0;
 }
 
+.footer-left {
+    margin-right: 70px;
+}
+
 .logo-link.footer {
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
 }
 
 .footer.logo-link {
@@ -377,6 +508,47 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-center-title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--primary-text-color);
+}
+
+.footer-social-list {
+    display: flex;
+}
+
+.footer-social-list + .footer-social-list {
+    margin-left: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    color: var(--primary-text-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--accent-color);
+}
+
+.footer-social-icon {
+    fill: currentColor;
+}
+
 /* ========== PORTFOLIO PAGE ========= */
 
 /* --------------- ACTIONS --------------- */
@@ -404,9 +576,15 @@ body {
     letter-spacing: 0.03em;
     color: var(--primary-btn-color);
 
-    background-color: #F5F4FA;
+    background-color: var(--primary-bg-color);
     border: none;
     border-radius: 4px;
+}
+
+.projects-filter-btn:hover,
+.projects-filter-btn:focus {
+    color: #ffffff;
+    background-color: var(--accent-color);
 }
 
 .projects-filter-btn.active {
@@ -420,8 +598,12 @@ body {
     gap: 30px;
 }
 
-.portfolio-item {
+.projects-item {
     flex-basis: calc(100% / 3 - 30px);
+}
+
+.projects-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-image {
@@ -429,12 +611,13 @@ body {
     height: auto;
 
     display: block;
-    margin-bottom: 20px;
-
 }
 
 .project-description {
     padding: 20px 24px;
+
+    border: 1px solid #eeeeee;
+    border-top: none;
 }
 
 .project-title {

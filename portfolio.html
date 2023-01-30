@@ -29,9 +29,22 @@
             </nav>
 
             <ul class="header-list list">
-                <li class="header-item"><a class="header-link link"
-                        href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li class="header-item"><a class="header-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                <li class="header-item">
+                    <a class="header-link link" href="mailto:info@devstudio.com">
+                        <svg class="header-link-icon" width="16" height="12">
+                            <use href="./images/icons.svg#mail"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="header-item">
+                    <a class="header-link link" href="tel:+380961111111">
+                        <svg class="header-link-icon" width="10" height="16">
+                            <use href="./images/icons.svg#phone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
         </div>
     </header>
@@ -57,63 +70,72 @@
 
                 <ul class="projects-list list">
                     <li class="projects-item">
-                        <img class="project-image" src="./images/portfolio-1.jpg" alt="projects 1">
+                        <img class="project-image" src="./images/portfolio-1.jpg" alt="projects 1" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Технокряк</h2>
                             <p class="project-text">Веб-сайт</p>
                         </div>
                     </li>
                     <li class="projects-item">
-                        <img class="project-image" src="./images/portfolio-2.jpg" alt="projects 2">
+                        <img class="project-image" src="./images/portfolio-2.jpg" alt="projects 2" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
                             <p class="project-text">Дизайн</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-3.jpg" alt="projects 3">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-3.jpg" alt="projects 3" width="370"
+                            height="294">
                         <div class="project-description">
-                            <h2>Ресторан Seafood</h2>
+                            <h2 class="project-title">Ресторан Seafood</h2>
                             <p class="project-text">Додаток</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-4.jpg" alt="projects 4">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-4.jpg" alt="projects 4" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Проєкт Prime</h2>
                             <p class="project-text">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-5.jpg" alt="projects 5">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-5.jpg" alt="projects 5" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Проєкт Boxes</h2>
                             <p class="project-text">Додаток</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-6.jpg" alt="projects 6">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-6.jpg" alt="projects 6" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Inspiration has no Borders</h2>
                             <p>Веб-сайт</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-7.jpg" alt="projects 7">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-7.jpg" alt="projects 7" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Видання Limited Edition</h2>
                             <p class="project-text">Дизайн</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-8.jpg" alt="projects 8">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-8.jpg" alt="projects 8" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Проєкт LAB</h2>
                             <p class="project-text">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img class="project-image" src="./images/portfolio-9.jpg" alt="projects 9">
+                    <li class="projects-item">
+                        <img class="project-image" src="./images/portfolio-9.jpg" alt="projects 9" width="370"
+                            height="294">
                         <div class="project-description">
                             <h2 class="project-title">Growing Business</h2>
                             <p class="project-text">Додаток</p>
@@ -128,14 +150,50 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <a class="logo-link footer link" href="./" lang="en"><span class="accent">Web</span>Studio</a>
-            <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
-            <ul class="footer-list list">
-                <li class="footer-item"><a class="footer-link link"
-                        href="mailto:info@devstudio.com">info@devstudio.com</a>
-                </li>
-                <li class="footer-item"><a class="footer-link link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul>
+            <div class="footer-left">
+                <a class="logo-link footer link" href="./" lang="en"><span class="accent">Web</span>Studio</a>
+                <address class="footer-address">м. Київ, пр-т Лесі Українки, 26</address>
+                <ul class="footer-list list">
+                    <li class="footer-item"><a class="footer-link link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="footer-item"><a class="footer-link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <p class="footer-center-title">Приєднуйтесь</p>
+                <ul class="footer-social-list list">
+                    <li class="footer-social-list">
+                        <a href="" class="footer-social-link link" aria-label="Instagram">
+                            <svg class="footer-social-icon" width="20" height="20">
+                                <use href="./images/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social-list">
+                        <a href="" class="footer-social-link link" aria-label="Twitter">
+                            <svg class="footer-social-icon" width="20" height="20">
+                                <use href="./images/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social-list">
+                        <a href="" class="footer-social-link link" aria-label="Facebook">
+                            <svg class="footer-social-icon" width="20" height="20">
+                                <use href="./images/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social-list">
+                        <a href="" class="footer-social-link link" aria-label="LinkedIn">
+                            <svg class="footer-social-icon" width="20" height="20">
+                                <use href="./images/icons.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
